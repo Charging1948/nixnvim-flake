@@ -2,7 +2,7 @@
 {
   plugins = {
     indent-blankline = {
-      enable = true;
+      enable = false;
 
       settings = {
         scope.enabled = false;
