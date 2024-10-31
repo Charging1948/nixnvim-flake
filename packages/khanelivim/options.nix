@@ -61,7 +61,10 @@
     laststatus = 3; # When to use a status line for the last window
     fileencoding = "utf-8"; # File-content encoding for the current buffer
     termguicolors = true; # Enables 24-bit RGB color in the |TUI|
-    spelllang = lib.mkDefault [ "en_us" ]; # Spell check languages
+    spelllang = lib.mkDefault [
+      "en_us"
+      "de_de"
+    ]; # Spell check languages
     spell = true; # Highlight spelling mistakes (local to window)
     wrap = false; # Prevent text from wrapping
 
