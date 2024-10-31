@@ -8,6 +8,7 @@
         -- FormatDisable! will disable formatting just for this buffer
         vim.b.disable_autoformat = true
       else
+        -- FormatDisable will disable formatting globally
         vim.g.disable_autoformat = true
       end
     end, {
@@ -89,15 +90,18 @@
             "shellharden"
             "shfmt"
           ];
-          bicep = [ "bicep" ];
           c = [ "clang_format" ];
           cmake = [ "cmake-format" ];
           cpp = [ "clang_format" ];
           cs = [ "csharpier" ];
           css = [ "stylelint" ];
           fish = [ "fish_indent" ];
-          fsharp = [ "fantomas" ];
           gdscript = [ "gdformat" ];
+          go = [
+            "gofumpt"
+            "golines"
+            "goimports"
+          ];
           java = [ "google-java-format" ];
           javascript = {
             __unkeyed-1 = "prettierd";
@@ -120,8 +124,6 @@
             "shfmt"
           ];
           sql = [ "sqlfluff" ];
-          # FIXME: broken nixpkgs
-          # swift = [ "swift_format" ];
           terraform = [ "terraform_fmt" ];
           toml = [ "taplo" ];
           typescript = {
@@ -147,9 +149,6 @@
           black = {
             command = lib.getExe pkgs.black;
           };
-          bicep = {
-            command = lib.getExe pkgs.bicep;
-          };
           cmake-format = {
             command = lib.getExe pkgs.cmake-format;
           };
@@ -162,14 +161,20 @@
           isort = {
             command = lib.getExe pkgs.isort;
           };
-          fantomas = {
-            command = lib.getExe pkgs.fantomas;
-          };
           gdformat = {
             command = lib.getExe' pkgs.gdtoolkit_4 "gdformat";
           };
           google-java-format = {
             command = lib.getExe pkgs.google-java-format;
+          };
+          gofumpt = {
+            command = lib.getExe pkgs.gofumpt;
+          };
+          goimports = {
+            command = lib.getExe' pkgs.gotools "goimports";
+          };
+          golines = {
+            command = lib.getExe' pkgs.golines "golines";
           };
           jq = {
             command = lib.getExe pkgs.jq;
@@ -207,10 +212,6 @@
           stylua = {
             command = lib.getExe pkgs.stylua;
           };
-          # FIXME: broken nixpkgs
-          # swift_format = {
-          #   command = lib.getExe pkgs.swift-format;
-          # };
           taplo = {
             command = lib.getExe pkgs.taplo;
           };
