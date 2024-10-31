@@ -1,11 +1,9 @@
 {
-  description = "KhaneliVim";
+  description = "Nvim Custom Built";
 
   inputs = {
-    # NixPkgs (nixos-unstable)
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
-      # url = "git+file:///home/khaneliman/Documents/github/NixOS/nixpkgs";
     };
 
     # Neovim nix configuration
@@ -13,6 +11,7 @@
       url = "github:nix-community/nixvim";
       # url = "git+file:///Users/khaneliman/Documents/github/nixvim";
       # url = "git+file:///home/khaneliman/Documents/github/nixvim";
+      # url = "git+file:///home/jk/dev/github/nixnvim-flake";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,19 +41,19 @@
 
         snowfall = {
           meta = {
-            name = "khanelivim";
-            title = "khanelivim";
+            name = "customvim";
+            title = "customvim";
           };
 
-          namespace = "khanelivim";
+          namespace = "custom";
         };
       };
     in
     lib.mkFlake {
       alias = {
         packages = {
-          default = "khanelivim";
-          nvim = "khanelivim";
+          default = "nvim";
+          nvim = "nvim";
         };
       };
 

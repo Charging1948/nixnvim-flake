@@ -115,7 +115,7 @@ in
             };
           }
         ];
-        lualine_z = [ "tabs" ];
+        lualine_z = [ ];
       };
 
       winbar = {

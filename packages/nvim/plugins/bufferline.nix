@@ -55,7 +55,7 @@
                   sp = "#494d64";
                 };
                 priority = 2;
-                # icon = "";
+                icon = "";
                 matcher.__raw = ''
                   function(buf)
                     return buf.name:match('%test') or buf.name:match('%.spec')
@@ -72,7 +72,7 @@
                 auto_close = false;
                 matcher.__raw = ''
                   function(buf)
-                    return buf.name:match('%.md') or buf.name:match('%.txt')
+                    return buf.name:match('%.md') or buf.name:match('%.qmd') or buf.name:match('%.txt')
                   end
                 '';
               }

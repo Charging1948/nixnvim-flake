@@ -1,7 +1,7 @@
 { config, lib, ... }:
 {
   plugins = {
-    compiler.enable = true;
+    compiler.enable = false;
 
     which-key.settings.spec = lib.optionals config.plugins.compiler.enable [
       {

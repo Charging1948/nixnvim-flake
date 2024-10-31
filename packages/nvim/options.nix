@@ -56,7 +56,7 @@
     #   case characters
     cursorline = true; # Highlight the screen line of the cursor
     cursorcolumn = false; # Highlight the screen column of the cursor
-    signcolumn = "yes"; # Whether to show the signcolumn
+    signcolumn = "yes:5"; # Whether to show the signcolumn
     colorcolumn = "100"; # Columns to highlight
     laststatus = 3; # When to use a status line for the last window
     fileencoding = "utf-8"; # File-content encoding for the current buffer

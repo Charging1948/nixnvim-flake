@@ -20,6 +20,8 @@ in
         };
 
         signcolumn = false;
+        numhl = false;
+        signs_staged_enable = false;
       };
     };
 

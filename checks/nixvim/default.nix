@@ -11,6 +11,6 @@ nixvim.lib.${system}.check.mkTestDerivationFromNixvimModule {
   inherit pkgs;
 
   module = {
-    imports = lib.snowfall.fs.get-non-default-nix-files-recursive ../../packages/khanelivim;
+    imports = lib.snowfall.fs.get-non-default-nix-files-recursive ../../packages/nvim;
   };
 }

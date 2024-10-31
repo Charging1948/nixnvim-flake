@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
   extraPlugins = [
-    pkgs.khanelivim.tree-sitter-norg-meta
-    pkgs.khanelivim.tree-sitter-nu
+    pkgs.custom.tree-sitter-norg-meta
+    pkgs.custom.tree-sitter-nu
   ];
 
   plugins = {
@@ -11,8 +11,8 @@
 
       folding = true;
       grammarPackages = config.plugins.treesitter.package.passthru.allGrammars ++ [
-        pkgs.khanelivim.tree-sitter-norg-meta
-        pkgs.khanelivim.tree-sitter-nu
+        pkgs.custom.tree-sitter-norg-meta
+        pkgs.custom.tree-sitter-nu
       ];
       nixvimInjections = true;
 

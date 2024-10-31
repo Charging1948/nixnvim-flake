@@ -1,7 +1,7 @@
 {
   plugins = {
     nvim-lightbulb = {
-      enable = true;
+      enable = false;
 
       settings = {
         autocmd = {
@@ -9,17 +9,18 @@
           updatetime = 200;
         };
         line = {
-          enabled = true;
+          enabled = false;
         };
         number = {
           enabled = true;
         };
         sign = {
           enabled = true;
+          lens_text = "🔎";
           text = " 󰌶";
         };
         status_text = {
-          enabled = true;
+          enabled = false;
           text = " 󰌶 ";
         };
       };

@@ -69,7 +69,7 @@
         percentage = 0.25;
       };
 
-      flavour = "macchiato";
+      flavour = "mocha";
 
       integrations = {
         aerial = true;

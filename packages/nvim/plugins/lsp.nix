@@ -253,7 +253,7 @@
         nil_ls = {
           # FIXME: when nixd works again
           # enable = !config.plugins.lsp.servers.nixd.enable;
-          enable = true;
+          enable = false;
           filetypes = [ "nix" ];
           settings = {
             formatting = {
@@ -269,12 +269,15 @@
 
         nixd = {
           enable = !config.plugins.lsp.servers.nil_ls.enable;
-          filetypes = [ "nix" ];
-          settings = {
-            formatting = {
-              command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
-            };
+          extraOptions = {
+            offset_encoding = "utf-8";
           };
+          filetypes = [ "nix" ];
+          # settings = {
+          #   formatting = {
+          #     command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
+          #   };
+          # };
         };
 
         nushell = {
@@ -334,10 +337,10 @@
           filetypes = [ "sql" ];
         };
 
-        # tailwindcss = {
-        #   enable = true;
-        #   filetypes = [ "css" ];
-        # };
+        tailwindcss = {
+          enable = true;
+          filetypes = [ "css" ];
+        };
 
         taplo = {
           enable = true;

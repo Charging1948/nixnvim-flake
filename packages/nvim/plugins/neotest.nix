@@ -13,36 +13,14 @@
 
       adapters = {
         bash.enable = config.plugins.neotest.enable;
+        dart.enable = config.plugins.neotest.enable;
         deno.enable = config.plugins.neotest.enable;
-        dotnet = {
-          inherit (config.plugins.neotest) enable;
-
-          settings = {
-            dap = {
-              args = {
-                justMyCode = false;
-              };
-            };
-          };
-        };
         go.enable = config.plugins.neotest.enable;
-        java.enable = config.plugins.neotest.enable;
-        # NOTE: just run NeotestJava setup
-        # java.settings = {
-        # Not sure why this wasn't working
-        # junit_jar =
-        #   pkgs.fetchurl
-        #     {
-        #       url = "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.1/junit-platform-console-standalone-1.10.1.jar";
-        #       hash = "sha256-tC6qU9E1dtF9tfuLKAcipq6eNtr5X0JivG6W1Msgcl8=";
-        #     }
-        #     .outPath;
-        # };
-        jest.enable = config.plugins.neotest.enable;
+        haskell.enable = config.plugins.neotest.enable;
         playwright.enable = config.plugins.neotest.enable;
         plenary.enable = config.plugins.neotest.enable;
         python.enable = config.plugins.neotest.enable;
-        # rust.enable = config.plugins.neotest.enable;
+        vitest.enable = config.plugins.neotest.enable;
         zig.enable = config.plugins.neotest.enable;
       };
     };
