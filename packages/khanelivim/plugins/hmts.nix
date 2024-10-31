@@ -1,7 +1,0 @@
-{
-  plugins = {
-    hmts = {
-      # enable = true;
-    };
-  };
-}
