@@ -8,8 +8,7 @@ in
       enable = true;
 
       settings = {
-        enabled = true;
-        disable_mouse = false;
+        enabled = false;
       };
     };
 
