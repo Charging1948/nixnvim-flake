@@ -172,6 +172,10 @@
           filetypes = [ "dockerfile" ];
         };
 
+        docker_compose_language_service = {
+          enable = true;
+        };
+
         eslint = {
           enable = true;
           filetypes = [
@@ -195,6 +199,23 @@
             "gdscript"
             "gdscript3"
           ];
+        };
+
+        gitlab_ci_ls = {
+          enable = true;
+          package = pkgs.gitlab-ci-ls;
+        };
+
+        gleam = {
+          enable = true;
+        };
+
+        golangci_lint_ls = {
+          enable = true;
+        };
+
+        gopls = {
+          enable = true;
         };
 
         harper_ls = {
@@ -347,6 +368,10 @@
           filetypes = [ "toml" ];
         };
 
+        tinymist = {
+          enable = true;
+        };
+
         ts_ls = {
           enable = !config.plugins.typescript-tools.enable;
           filetypes = [
@@ -355,6 +380,11 @@
             "typescript"
             "typescriptreact"
           ];
+        };
+
+        unocss = {
+          enable = true;
+          package = pkgs.custom.unocss-language-server;
         };
 
         yamlls = {
